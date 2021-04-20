@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 						break;
 					}
 				}
-				int bright = map(n, 0, maxIteration, 0, 255);
+				int bright = map(i, 0, maxIteration, 0, 255);
 				if (i == maxIteration||bright<21 )
 				{
 					bright = 0;
