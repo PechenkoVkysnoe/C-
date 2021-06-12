@@ -191,7 +191,3 @@ void DoubleList::pop_back()
     Tail = tmp;
     Size--;
 }
-
-/*
- * DoubleList arr = {1, 2, 3}; // такое работать не будет, надо доделать...
-*/

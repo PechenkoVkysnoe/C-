@@ -60,13 +60,17 @@ void HashTable<Key, Value, Hasher>::insert(const Key key,Value value)
 	int n = 0;
 	for(auto it: arr[pos])
 	{
+		if (it.first==key)
+		{
+			throw std::runtume_error("There can be no two identical keys");
+		}
 		n++;
 	}
 	if (n>=SizeBatch)
 	{
 		rehash(2 * Size);
 	}
-	arr[pos].push_front(std::pair<const Key, Value>);
+	arr[pos].push_front(std::pair<const Key, Value>(key,value));
 }
 template <typename Key, typename Value, typename Hasher >
 void HashTable<Key, Value, Hasher>::rehash(int n)
