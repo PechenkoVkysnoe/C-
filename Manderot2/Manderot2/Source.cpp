@@ -32,8 +32,8 @@ int main(int argc, char* argv[])
 				long double b = map(y, 0, height, min, max);
 				long double ai = a;
 				long double bi = b;
-				int n = 0;
-				for (int i = 0; i < maxIteration; i++)
+				int i = 0;
+				for (i ; i < maxIteration; i++)
 				{
 					long double a1 = a * a - b * b;
 					long double b1 = 2 * a * b;
@@ -43,10 +43,9 @@ int main(int argc, char* argv[])
 					{
 						break;
 					}
-					n++;
 				}
-				int bright = map(n, 0, maxIteration, 0, 255);
-				if (n == maxIteration||bright<21 )
+				int bright = map(i, 0, maxIteration, 0, 255);
+				if (i == maxIteration||bright<21 )
 				{
 					bright = 0;
 				}
